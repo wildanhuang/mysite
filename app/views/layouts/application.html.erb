@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Mysite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wildan Huang</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <!-- Bootstrap -->
 
-</body>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="header transparent-black">
+      <div class="container">
+        <div class="navbar-header">
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <a href="../" class="navbar-brand">
+              <%= image_tag "logo.jpg", :alt => "wildan", :class => "logo" %>
+            </a>          
+          </ul>
+          <ul class="nav nav-pills navbar-right" style="margin-top:15px">
+            <li class="<%= 'active' if params[:cms_path] == 'clubs' %>"><a href="#">My Profile</a></li>
+            <li class="<%= 'active' if params[:cms_path] == 'parents' %>"><a href="#">Movies</a></li>
+            <li class="<%= 'active' if params[:cms_path] == 'pricing' %>"><a href="#">Hobbies</a></li>
+            <li class="<%= 'active' if params[:cms_path] == 'contact_us' %>"><a href="#">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <%= yield %>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <div class="footer transparent-black">
+      <div class="container">
+        <div class="navbar-header">
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+          <ul class="social-networks">
+            <li class="facebook"><a target="_blank" href="https://www.facebook.com/wildanhuang">Facebook</a>
+              <div class="popup" style="display: none;">
+                <div class="holder">
+                  <p>Facebook</p>
+                </div>
+              </div>
+            </li>
+            <li class="twitter"><a target="_blank" href="https://twitter.com/wildanhuang">Twitter</a>
+              <div class="popup" style="display: none;">
+                <div class="holder">
+                  <p>Twitter</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav nav-pills navbar-right">
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
 </html>
