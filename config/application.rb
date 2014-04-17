@@ -23,5 +23,6 @@ module Mysite
     config.assets.enabled = false
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.assets.precompile += %w( .svg .eot .woff .ttf)
+    config.assets.initialize_on_precompile = false
   end
 end
