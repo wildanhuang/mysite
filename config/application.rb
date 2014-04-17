@@ -20,8 +20,12 @@ module Mysite
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
     config.assets.initialize_on_precompile = false
-    config.assets.enabled = false
+
+    
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     #config.assets.precompile += %w( .svg .eot .woff .ttf)
   end
