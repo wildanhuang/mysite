@@ -1,6 +1,6 @@
 /* my own style */
 body {
-  background: url("background.png") no-repeat fixed;
+  background: url("/assets/background.png") no-repeat fixed;
   background-position: right;
   background-position: top;
   background-color: #eee;
@@ -42,11 +42,11 @@ div .divider {
 }
 
 .transparent {
-  background: url("trans_50.png") repeat;
+  background: url("/assets/trans_50.png") repeat;
 }
 
 .transparent-black {
-  background: url("trans_black.png") repeat;
+  background: url("/assets/trans_black.png") repeat;
 }
 
 
